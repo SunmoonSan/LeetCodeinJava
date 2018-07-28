@@ -1,4 +1,4 @@
-package com.maple.leetcode;
+package com.maple.leetcode.code000;
 
 import java.util.Stack;
 
