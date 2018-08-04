@@ -41,12 +41,12 @@ package com.maple.leetcode.code800;
 
 public class LeetCode832 {
     public int[][] flipAndInvertImage(int[][] A) {
-        for (int i=0;i<A.length;i++) {
+        for (int i = 0; i < A.length; i++) {
             int l = 0;
-            int r = A[i].length-1;
+            int r = A[i].length - 1;
 
             // 前后倒置
-            while (l<r) {
+            while (l < r) {
                 int t = A[i][l];
                 A[i][l] = A[i][r];
                 A[i][r] = t;
@@ -56,11 +56,11 @@ public class LeetCode832 {
             }
 
             // 1,0反转
-            for (int j=0;j<A[i].length;j++) {
-                if (A[i][j]==0){
-                    A[i][j] =1;
+            for (int j = 0; j < A[i].length; j++) {
+                if (A[i][j] == 0) {
+                    A[i][j] = 1;
                 } else {
-                    A[i][j] =0;
+                    A[i][j] = 0;
                 }
             }
         }
@@ -71,14 +71,14 @@ public class LeetCode832 {
     public static void main(String[] args) {
         LeetCode832 leet = new LeetCode832();
         int[][] A = {
-                {1,1,0},
-                {1,0,1},
-                {0,0,0}
+                {1, 1, 0},
+                {1, 0, 1},
+                {0, 0, 0}
         };
         int[][] B = leet.flipAndInvertImage(A);
 
-        for (int i=0;i<B.length;i++) {
-            for (int j=0;j<B[i].length;j++) {
+        for (int i = 0; i < B.length; i++) {
+            for (int j = 0; j < B[i].length; j++) {
                 System.out.print(B[i][j] + " ,");
             }
             System.out.println();
