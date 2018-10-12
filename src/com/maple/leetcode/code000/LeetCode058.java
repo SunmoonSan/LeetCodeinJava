@@ -5,7 +5,6 @@ package com.maple.leetcode.code000;
 
  说明：一个单词是指由字母组成，但不包含任何空格的字符串。
  示例:
-
  输入: "Hello World"
  输出: 5
 */
