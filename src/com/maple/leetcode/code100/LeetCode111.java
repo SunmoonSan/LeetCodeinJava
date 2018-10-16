@@ -11,7 +11,7 @@ package com.maple.leetcode.code100;
     /  \
    15   7
 返回它的最小深度  2.
- */
+*/
 
 public class LeetCode111 {
     public int minDepth(TreeNode root) {
