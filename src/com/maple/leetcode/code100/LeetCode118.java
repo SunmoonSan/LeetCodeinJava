@@ -20,41 +20,32 @@ import java.util.List;
 
 public class LeetCode118 {
     public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> lists = new ArrayList<>();
-        if (numRows==0) { // []
-            return lists;
-        } else if (numRows==1) {  // [[1]]
-            List<Integer> integers = new ArrayList<>();
-            integers.add(1);
-            lists.add(integers);
-        } else {  // [[1], [1,1]]
-            List<Integer> integers1 = new ArrayList<>();
-            integers1.add(1);
-            lists.add(integers1);
+        List<List<Integer>> triangle = new ArrayList<List<Integer>>();
 
-            List<Integer> integers2 = new ArrayList<>();
-            integers2.add(1);
-            integers2.add(1);
-            lists.add(integers2);
+        if (numRows == 0) {
+            return triangle;
         }
 
-        for (int i=3;i<=numRows;i++) {
-            List<Integer> integersi = new ArrayList<>();
-            integersi.add(1);
-            for (int j=0;j<i-2;j++) {
-                int a = lists.get(i-2).get(j);
-                int b = lists.get(i-2).get(j+1);
-                integersi.add(a+b);
+        triangle.add(new ArrayList<>());
+        triangle.get(0).add(1);
+
+        for (int i = 1; i < numRows; i++) {
+            List<Integer> row = new ArrayList<>();
+            List<Integer> prevRow = triangle.get(i - 1);
+
+            row.add(1);
+            for (int j = 1; j < i; j++) {
+                row.add(prevRow.get(j)+prevRow.get(j-1));
             }
-            integersi.add(1);
-            lists.add(integersi);
-        }
+            row.add(1);
 
-        return lists;
+            triangle.add(row);
+        }
+        return triangle;
     }
 
     public static void main(String[] args) {
         LeetCode118 leet = new LeetCode118();
-        leet.generate(1);
+        leet.generate(0);
     }
 }
