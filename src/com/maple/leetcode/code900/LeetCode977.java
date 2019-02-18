@@ -26,15 +26,16 @@ public class LeetCode977 {
             A[i] = A[i] * A[i];
         }
 
-        for (int i = A.length - 1; i >= 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (A[j] > A[j + 1]) {
-                    int t = A[j];
-                    A[j] = A[j + 1];
-                    A[j + 1] = t;
-                }
-            }
-        }
+//        for (int i = A.length - 1; i >= 0; i--) {
+//            for (int j = 0; j < i; j++) {
+//                if (A[j] > A[j + 1]) {
+//                    int t = A[j];
+//                    A[j] = A[j + 1];
+//                    A[j + 1] = t;
+//                }
+//            }
+//        }
+        Arrays.sort(A);
 
         return A;
     }
