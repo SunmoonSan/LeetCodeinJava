@@ -29,7 +29,7 @@ import java.util.List;
 
 public class LeetCode006 {
     public String convert(String s, int numRows) {
-        if (numRows == 1) {
+        if (numRows == 1) { // 若只有一行, 顺序不变, 直接返回s
             return s;
         }
 
@@ -39,7 +39,7 @@ public class LeetCode006 {
         }
 
         int curRow = 0;
-        boolean goingDown = true;
+        boolean goingDown = true;  // 记录指针移动的的方向, 上/下
         for (char c : s.toCharArray()) {
             if (goingDown) {
                 rows.get(curRow).append(c);
@@ -49,11 +49,12 @@ public class LeetCode006 {
                 curRow = curRow - 1;
             }
 
-            if (curRow == 0 || curRow == numRows - 1) {
+            if (curRow == 0 || curRow == numRows - 1) { //到达上,下边界, 则变为相反的方向
                 goingDown = !goingDown;
             }
         }
 
+        // 构造成字符串
         StringBuilder builder = new StringBuilder();
         for (StringBuilder row : rows) {
             builder.append(row.toString());
