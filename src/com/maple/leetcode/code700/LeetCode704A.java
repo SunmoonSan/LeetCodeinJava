@@ -16,7 +16,10 @@ package com.maple.leetcode.code700;
     nums 的每个元素都将在 [-9999, 9999]之间。
 */
 
-public class LeetCode704 {
+/*
+递归实现
+ */
+public class LeetCode704A {
     public int search(int[] nums, int target) {
         return binarySearch(nums, target, 0, nums.length - 1);
     }
@@ -37,7 +40,7 @@ public class LeetCode704 {
     }
 
     public static void main(String[] args) {
-        LeetCode704 leet = new LeetCode704();
+        LeetCode704A leet = new LeetCode704A();
         int[] nums = {-1, 0, 3, 5, 9, 12};
         int target = 9;
         int s = leet.search(nums, target);
