@@ -10,7 +10,7 @@ package com.maple.leetcode.code200;
     2.尽量减少操作次数。
  */
 
-public class LeetCode283 {
+public class LeetCode283A {
     public void moveZeroes(int[] nums) {
         int index = 0; // 记录前面不为0位置
 
@@ -31,7 +31,7 @@ public class LeetCode283 {
 
     public static void main(String[] args) {
         int[] nums = {0, 1, 0, 3, 12};
-        LeetCode283 leet = new LeetCode283();
+        LeetCode283A leet = new LeetCode283A();
         leet.moveZeroes(nums);
     }
 }
