@@ -11,21 +11,19 @@ package com.maple.leetcode.code300;
 */
 
 public class LeetCode344 {
-    public String reverseString(String s) {
-        char[] chs1 = s.toCharArray();
 
-        int len = chs1.length;
-        char[] chs2 = new char[len];
-
-        for (int i=chs1.length-1; i>=0; i--) {
-            chs2[len-i-1] = chs1[i];
+    public void reverseString(char[] s) {
+        int len = s.length;
+        for (int i = 0; i < len / 2; i++) {
+            char t = s[i];
+            s[i] = s[len - i - 1];
+            s[len - i - 1] = t;
         }
-        return String.valueOf(chs2);
     }
 
     public static void main(String[] args) {
         LeetCode344 leet = new LeetCode344();
-        String s = leet.reverseString("hello");
-        System.out.println(s);
+        char[] cs = {'h', 'e', 'l', 'l', 'o'};
+        leet.reverseString(cs);
     }
 }
