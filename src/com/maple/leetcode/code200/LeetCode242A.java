@@ -15,7 +15,7 @@ package com.maple.leetcode.code200;
 
 import java.util.Arrays;
 
-public class LeetCode242 {
+public class LeetCode242A {
     public boolean isAnagram(String s, String t) {
 
         // 统计字符串s中每个字符的个数
@@ -35,7 +35,7 @@ public class LeetCode242 {
     }
 
     public static void main(String[] args) {
-        LeetCode242 leet = new LeetCode242();
+        LeetCode242A leet = new LeetCode242A();
         String s = "anagram";
         String t = "nagaram";
         boolean b = leet.isAnagram(s, t);
