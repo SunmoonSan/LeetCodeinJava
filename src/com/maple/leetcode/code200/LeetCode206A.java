@@ -8,7 +8,7 @@ package com.maple.leetcode.code200;
 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
 */
 
-public class LeetCode206 {
+public class LeetCode206A {
     public ListNode reverseList(ListNode head) {
         if (head == null) {
             return null;
