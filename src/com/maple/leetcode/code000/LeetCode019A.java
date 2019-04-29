@@ -13,7 +13,7 @@ package com.maple.leetcode.code000;
 你能尝试使用一趟扫描实现吗？
 */
 
-public class LeetCode019 {
+public class LeetCode019A {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         if (head==null) {
             return null;
