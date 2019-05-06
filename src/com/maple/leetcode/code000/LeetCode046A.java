@@ -18,7 +18,7 @@ package com.maple.leetcode.code000;
 
 import java.util.*;
 
-public class LeetCode046 {
+public class LeetCode046A {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> lists = new ArrayList<>();
         permute(lists, nums, 0, nums.length - 1);
@@ -48,7 +48,7 @@ public class LeetCode046 {
     }
 
     public static void main(String[] args) {
-        LeetCode046 leet = new LeetCode046();
+        LeetCode046A leet = new LeetCode046A();
         int[] nums = {1, 2, 3, 4};
         List<List<Integer>> lists = leet.permute(nums);
         System.out.println(lists);
