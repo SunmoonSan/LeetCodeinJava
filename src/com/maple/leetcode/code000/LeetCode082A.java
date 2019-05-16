@@ -13,7 +13,7 @@ package com.maple.leetcode.code000;
 import java.util.HashSet;
 import java.util.Set;
 
-public class LeetCode082 {
+public class LeetCode082A {
     public ListNode deleteDuplicates(ListNode head) {
 
         // 若head为空,直接返回空
@@ -52,7 +52,7 @@ public class LeetCode082 {
     }
 
     public static void main(String[] args) {
-        LeetCode082 leet = new LeetCode082();
+        LeetCode082A leet = new LeetCode082A();
         int[] nums = {1, 1, 1, 2, 3};
         ListNode head = leet.deleteDuplicates(new ListNode(nums));
         System.out.println(head);
