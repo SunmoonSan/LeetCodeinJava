@@ -17,7 +17,6 @@ empty() -- 返回栈是否为空
  */
 
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class LeetCode225 {
 
