@@ -1,4 +1,4 @@
-package com.maple.leetcode.code200;
+package com.maple.leetcode.code300;
 
 public class ListNode {
     int val;
