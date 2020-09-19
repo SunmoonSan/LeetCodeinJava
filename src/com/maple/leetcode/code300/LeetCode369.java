@@ -54,7 +54,6 @@ public class LeetCode369 {
         LeetCode369 leet = new LeetCode369();
         int[] arr = {9, 9, 9};
         ListNode head = new ListNode(arr);
-        ListNode h = leet.plusOne(head);
-        System.out.println(h);
+        leet.plusOne(head);
     }
 }
