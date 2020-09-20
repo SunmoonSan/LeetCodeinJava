@@ -38,10 +38,13 @@ public class LeetCode105 {
         if (preLeft > preRight || inLeft > inRight) {
             return null;
         }
-        int rootIndex = kvs.get(preorder[preLeft]);
-        TreeNode root = new TreeNode(preorder[preLeft]);
-        root.left = buildTree(preorder, preLeft + 1, preLeft + rootIndex - inLeft, kvs, inLeft, rootIndex - 1);
-        root.right = buildTree(preorder, preLeft + 1 + rootIndex - inLeft, preRight, kvs, rootIndex + 1, inRight);
+        // preLeft, preLeft+1(前序数组左子树左边界),   preLeft+rootIndex-inLeft(前序数组左子树右边界), preLeft+1+rootIndex-inLeft(前序数组右子树右边界), preRight(前序数组右子树右边界)
+        // inLeft, rootIndex-1(中序数组左子树左边界),  rootIndex(中序数组左子树右边界),                rootIndex+1(中序数组右子树右边界),                inRight(中序数组右子树右边界)
+
+        int rootIndex = kvs.get(preorder[preLeft]); // 中序数组的根节点索引
+        TreeNode root = new TreeNode(preorder[preLeft]); // 创建根节点
+        root.left = buildTree(preorder, preLeft + 1, preLeft + rootIndex - inLeft, kvs, inLeft, rootIndex - 1); // 构建左子树
+        root.right = buildTree(preorder, preLeft + 1 + rootIndex - inLeft, preRight, kvs, rootIndex + 1, inRight); // 构建右子树
         return root;
     }
 
