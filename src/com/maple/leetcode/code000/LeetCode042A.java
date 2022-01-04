@@ -5,9 +5,9 @@ package com.maple.leetcode.code000;
  * @time 2022/1/4 19:53:25
  * @desc
  */
-public class LeetCode042 {
+public class LeetCode042A {
     public static void main(String[] args) {
-        LeetCode042 leet = new LeetCode042();
+        LeetCode042A leet = new LeetCode042A();
         int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         leet.trap(height);
     }
