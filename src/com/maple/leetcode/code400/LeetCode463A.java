@@ -1,6 +1,6 @@
 package com.maple.leetcode.code400;
 
-public class LeetCode463 {
+public class LeetCode463A {
     public int islandPerimeter(int[][] grid) {
         int len = 0;
         for (int i = 0; i < grid.length; i++) {
@@ -40,7 +40,7 @@ public class LeetCode463 {
     }
 
     public static void main(String[] args) {
-        LeetCode463 leet = new LeetCode463();
+        LeetCode463A leet = new LeetCode463A();
         int[][] s = {
                 {0, 1, 0, 0},
                 {1, 1, 1, 0},
