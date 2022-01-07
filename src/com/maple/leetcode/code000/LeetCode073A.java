@@ -35,7 +35,7 @@ package com.maple.leetcode.code000;
 你能想出一个常数空间的解决方案吗？
  */
 
-public class LeetCode073 {
+public class LeetCode073A {
     public void setZeroes(int[][] matrix) {
         int row = matrix.length;
         int col = matrix[0].length;
@@ -67,11 +67,10 @@ public class LeetCode073 {
                 }
             }
         }
-
     }
 
     public static void main(String[] args) {
-        LeetCode073 leet = new LeetCode073();
+        LeetCode073A leet = new LeetCode073A();
         int[][] arr = {
                 {0, 1, 2, 0},
                 {3, 4, 5, 2},
