@@ -1,20 +1,17 @@
 package com.maple.leetcode.code700;
 
-import com.maple.leetcode.code000.LeetCode012;
 
 public class LeetCode709 {
     public String toLowerCase(String str) {
         char[] chars = str.toCharArray();
         StringBuilder res = new StringBuilder();
 
-        for (int i=0;i<chars.length;i++) {
-            if (chars[i]>='A' && chars[i]<='Z') {
-                chars[i] = (char) (chars[i]+32);
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] >= 'A' && chars[i] <= 'Z') {
+                chars[i] = (char) (chars[i] + 32);
             }
-
             res.append(chars[i]);
         }
-
         return res.toString();
     }
 
