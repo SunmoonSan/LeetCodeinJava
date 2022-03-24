@@ -1,6 +1,6 @@
 package com.maple.leetcode.code100;
 
-public class LeetCode125 {
+public class LeetCode125A {
     public boolean isPalindrome(String s) {
         char[] cs = s.toLowerCase().toCharArray();
         int left = 0;
@@ -22,7 +22,7 @@ public class LeetCode125 {
     }
 
     public static void main(String[] args) {
-        LeetCode125 leet = new LeetCode125();
+        LeetCode125A leet = new LeetCode125A();
 //        String s = ".,";
 //        String s = "A man, a plan, a canal: Panama";
         String s = ".,.,...";
